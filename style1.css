@@ -1,0 +1,147 @@
+/* Styling for the envelope */
+#envelope {
+    margin: 150px auto;
+    position: relative;
+    width: 280px;
+    height: 180px;
+    border-bottom-left-radius: 6px;
+    border-bottom-right-radius: 6px;
+    background-color: #f9c5c8;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+  }
+  
+  /* Styling for the front flap of the envelope */
+  .front.flap {
+    position: absolute;
+    border-left: 140px solid transparent;
+    border-right: 140px solid transparent;
+    border-bottom: 82px solid transparent;
+    border-top: 98px solid #ff3333;
+    transform-origin: top;
+    pointer-events: none;
+  }
+  
+  /* Styling for the front pocket of the envelope */
+  .front.pocket {
+    border-left: 140px solid #ff9999;
+    border-right: 140px solid #ff9999;
+    border-bottom: 90px solid #fd8787;
+    border-top: 90px solid transparent;
+    border-bottom-left-radius: 6px;
+    border-bottom-right-radius: 6px;
+  }
+  
+  /* Styling for the letter inside the envelope */
+  .letter {
+    position: relative;
+    background-color: #f9c5c8;
+    width: 90%;
+    margin: 5% auto;
+    height: 90%;
+    border-radius: 6px;
+    box-shadow: 0 2px 26px rgba(0, 0, 0, 0.12);
+  }
+  
+  /* Styling for the lines of text inside the letter */
+  .letter .line {
+    margin: 10px 0;
+    text-align: center;
+    font-size: 16px;
+  }
+  
+  /* Styling for the hearts */
+  .hearts {
+    position: absolute;
+    top: 90px;
+    left: 0;
+    right: 0;
+    z-index: 2;
+  }
+  
+  /* Styling for individual heart elements */
+  .heart {
+    position: absolute;
+    bottom: 0;
+    right: 10%;
+    pointer-events: none;
+  }
+  
+  .heart:before,
+  .heart:after {
+    position: absolute;
+    content: "";
+    left: 50px;
+    top: 0;
+    width: 50px;
+    height: 80px;
+    background: #D00000;
+    border-radius: 50px 50px 0 0;
+    transform: rotate(-45deg);
+    transform-origin: 0 100%;
+    pointer-events: none;
+  }
+  
+  .heart:after {
+    left: 0;
+    transform: rotate(45deg);
+    transform-origin: 100% 100%;
+  }
+  
+  /* Styling for animation */
+  .close .heart {
+    opacity: 0;
+  }
+  
+  .a1, .a2, .a3 {
+    opacity: 1;
+  }
+  
+  /* Styling for the reset section */
+  .reset {
+    text-align: center;
+  }
+  
+  .reset button {
+    font-weight: 800;
+    font-style: normal;
+    transition: all 0.1s linear;
+    -webkit-appearance: none;
+    background-color: transparent;
+    border: solid 2px #ff5757;
+    border-radius: 4px;
+    color: #ff5757;
+    display: inline-block;
+    font-size: 14px;
+    text-transform: uppercase;
+    margin: 5px;
+    padding: 10px;
+    line-height: 1em;
+    text-decoration: none;
+    min-width: 120px;
+    cursor: pointer;
+  }
+  
+  .reset button:hover {
+    background-color: #fc9d9d;
+    color: #a10000;
+  }
+  
+  /* Keyframes for animations */
+  @keyframes slideUp {
+    0% {
+      top: 0;
+    }
+    100% {
+      top: -600px;
+    }
+  }
+  
+  @keyframes sideSway {
+    0% {
+      margin-left: 0px;
+    }
+    100% {
+      margin-left: 50px;
+    }
+  }
+  
